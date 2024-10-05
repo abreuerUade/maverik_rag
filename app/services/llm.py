@@ -11,16 +11,13 @@ os.environ["OPENAI_API_KEY"] = settings.OPENAI_API_KEY
 model_ai = "gpt-3.5-turbo"
 llm = ChatOpenAI(model_name=model_ai)
 
-# Modelo de HuggingFace
-hf_llm = HuggingFaceEndpoint(
-    repo_id="microsoft/Phi-3.5-mini-instruct",
-    task="text-generation",
-    max_new_tokens=512,
-    do_sample=False,
-    repetition_penalty=1.03,
-)
+# # Modelo de HuggingFace
+# hf_llm = HuggingFaceEndpoint(
+#     repo_id="microsoft/Phi-3.5-mini-instruct",
+#     task="text-generation",
+#     max_new_tokens=512,
+#     do_sample=False,
+#     repetition_penalty=1.03,
+# )
 
-hf_llm.bind(max_tokens=8000)
-
-
-
+# hf_llm.bind(max_tokens=8000)
