@@ -3,6 +3,7 @@ from langchain.utilities.tavily_search import TavilySearchAPIWrapper
 from langchain.tools.retriever import create_retriever_tool
 from app.services.retriever import retriever
 from app.core.config import settings
+from langchain_core.utils.function_calling import convert_to_openai_function
 
 # Configuración de la API de Tavily
 tavilySearchAPIWrapper = TavilySearchAPIWrapper(
@@ -20,7 +21,9 @@ retriever_tool = create_retriever_tool(
     "Util para obtener información financiera. Consultar los documentos en español e inglés.",
 )
 
+# opoen_ai_retriever = convert_to_openai_function(retriever_tool)
+# open_ai_search = convert_to_openai_function(search)
+
 # Lista de herramientas
+# tools = [open_ai_search, opoen_ai_retriever]
 tools = [search, retriever_tool]
-
-

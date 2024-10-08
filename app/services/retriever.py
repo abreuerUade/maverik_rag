@@ -37,6 +37,6 @@ retriever = SelfQueryRetriever.from_llm(
     vectorstore=vector_store,
     document_contents=document_contents,
     metadata_field_info=metadata_field_info,
-    verbose=True,
+    verbose=False,
     enable_limit=True
 )

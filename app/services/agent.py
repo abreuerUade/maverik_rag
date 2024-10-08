@@ -7,10 +7,11 @@ from app.services.tools import tools
 from app.utils.helpers import format_chat_history
 from langchain.agents import AgentExecutor
 from app.services.llm import llm
+from langchain_core.utils.function_calling import convert_to_openai_function
 
 
 llm_with_tools = llm.bind(
-    functions=[format_tool_to_openai_function(t) for t in tools])
+    functions=[convert_to_openai_function(t) for t in tools])
 
 
 def create_agent_executor(user_profile_message):
