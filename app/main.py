@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from app.routers import chat
-from app.core.config import settings
+
 
 app = FastAPI(
     title="Maverik",

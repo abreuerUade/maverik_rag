@@ -1,9 +1,9 @@
 from langchain_community.tools import TavilySearchResults
-from langchain.utilities.tavily_search import TavilySearchAPIWrapper
+from langchain_community.utilities.tavily_search import TavilySearchAPIWrapper
 from langchain.tools.retriever import create_retriever_tool
 from app.services.retriever import retriever
 from app.core.config import settings
-from langchain_core.utils.function_calling import convert_to_openai_function
+
 
 # Configuración de la API de Tavily
 tavilySearchAPIWrapper = TavilySearchAPIWrapper(
