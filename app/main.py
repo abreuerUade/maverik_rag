@@ -8,9 +8,6 @@ app = FastAPI(
     version="1.0.0",
 )
 
-print(settings.MONGODB_ATLAS_CLUSTER_URI)
-
 app.get("/")(lambda: {"message": "Bienvenido a Maverik"})
-
 
 app.include_router(chat.router)

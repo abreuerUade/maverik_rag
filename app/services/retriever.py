@@ -6,6 +6,7 @@ from langchain.chains.query_constructor.base import AttributeInfo
 from langchain.retrievers import SelfQueryRetriever
 from app.services.llm import llm
 
+print("Vector store:")
 # Configuración del vector store
 vector_store = MongoDBAtlasVectorSearch(
     collection=MONGODB_COLLECTION,
@@ -13,6 +14,8 @@ vector_store = MongoDBAtlasVectorSearch(
     index_name=settings.ATLAS_VECTOR_SEARCH_INDEX_NAME,
     relevance_score_fn="cosine",
 )
+
+print("Vector store configurado")
 
 # Información de los campos de metadatos
 metadata_field_info = [
