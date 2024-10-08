@@ -4,9 +4,7 @@ pydantic
 pymongo
 langchain
 langchain-core
-langchain-huggingface
 langchain-openai
 langchain-mongodb
 langchain-community
-deep-translator
 lark

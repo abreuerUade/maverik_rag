@@ -1,5 +1,10 @@
-from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_openai import OpenAIEmbeddings
+from app.core.config import settings
+import os
 
-# Definir embeddings
-emb_model = "BAAI/bge-reranker-v2-m3"
-embeddings = HuggingFaceEmbeddings(model_name=emb_model)
+os.environ["OPENAI_API_KEY"] = settings.OPENAI_API_KEY
+
+embeddings = OpenAIEmbeddings(
+    model="text-embedding-3-small",
+    dimensions=1024
+)
