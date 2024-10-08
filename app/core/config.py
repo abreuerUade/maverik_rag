@@ -1,7 +1,13 @@
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
+
+    model_config = SettingsConfigDict(
+        env_file=".env",
+        env_file_encoding="utf-8",
+    )
+
     OPENAI_API_KEY: str
     TAVILY_API_KEY: str
     MONGODB_ATLAS_CLUSTER_URI: str
@@ -9,8 +15,6 @@ class Settings(BaseSettings):
     COLLECTION_NAME: str = "langchain_vectorstores"
     ATLAS_VECTOR_SEARCH_INDEX_NAME: str = "vector_index"
 
-    class Config:
-        env_file = ".env"
-
 
 settings = Settings()
+
