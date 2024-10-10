@@ -1,5 +1,5 @@
 from pymongo import MongoClient
-from app.core.config import settings
+from ..core.config import settings
 
 # Conexión a MongoDB Atlas
 client = MongoClient(settings.MONGODB_ATLAS_CLUSTER_URI)

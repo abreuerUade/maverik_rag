@@ -1,8 +1,8 @@
 from langchain_community.tools import TavilySearchResults
 from langchain_community.utilities.tavily_search import TavilySearchAPIWrapper
 from langchain.tools.retriever import create_retriever_tool
-from app.services.retriever import retriever
-from app.core.config import settings
+from .retriever import retriever
+from ..core.config import settings
 
 
 # Configuración de la API de Tavily

@@ -1,11 +1,11 @@
 from langchain_core.messages import HumanMessage
 from langchain.agents.output_parsers import OpenAIFunctionsAgentOutputParser
 from langchain.agents.format_scratchpad import format_to_openai_function_messages
-from app.core.prompt import prompt_template
-from app.services.tools import tools
-from app.utils.helpers import format_chat_history
+from ..core.prompt import prompt_template
+from .tools import tools
+from ..utils.helpers import format_chat_history
 from langchain.agents import AgentExecutor
-from app.services.llm import llm
+from .llm import llm
 from langchain_core.utils.function_calling import convert_to_openai_function
 
 

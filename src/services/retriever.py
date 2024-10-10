@@ -1,10 +1,10 @@
 from langchain_mongodb.vectorstores import MongoDBAtlasVectorSearch
-from app.services.database import MONGODB_COLLECTION
-from app.services.embedding import embeddings
-from app.core.config import settings
+from .database import MONGODB_COLLECTION
+from .embedding import embeddings
+from ..core.config import settings
 from langchain.chains.query_constructor.base import AttributeInfo
 from langchain.retrievers import SelfQueryRetriever
-from app.services.llm import llm
+from .llm import llm
 
 
 # Configuración del vector store

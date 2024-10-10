@@ -1,6 +1,6 @@
 import os
 from langchain_openai import ChatOpenAI
-from app.core.config import settings
+from ..core.config import settings
 
 
 # Configuración de la clave API de OpenAI

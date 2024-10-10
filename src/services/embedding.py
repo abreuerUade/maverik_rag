@@ -1,5 +1,5 @@
 from langchain_openai import OpenAIEmbeddings
-from app.core.config import settings
+from ..core.config import settings
 import os
 
 os.environ["OPENAI_API_KEY"] = settings.OPENAI_API_KEY

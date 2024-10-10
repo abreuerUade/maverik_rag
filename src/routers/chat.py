@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
-from app.services.agent import create_agent_executor
-from app.models.chat import ChatRequest, ChatResponse
+from ..services.agent import create_agent_executor
+from ..models.chat import ChatRequest, ChatResponse
 
 router = APIRouter()
 
@@ -12,7 +12,7 @@ async def chat_endpoint(request: ChatRequest):
     user_input = request.input
     user_profile = request.userProfile
     chat_history = request.chatHistory
-    
+
     agent_executor = create_agent_executor(user_profile)
     print(agent_executor)
     prompt_values = {
@@ -25,6 +25,5 @@ async def chat_endpoint(request: ChatRequest):
         output = response["output"]
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-
 
     return ChatResponse(response=output)

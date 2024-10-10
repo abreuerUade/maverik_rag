@@ -1,5 +1,6 @@
 from fastapi import FastAPI
-from app.routers import chat
+from .routers import chat
+from mangum import Mangum
 
 
 app = FastAPI(
@@ -11,3 +12,5 @@ app = FastAPI(
 app.get("/")(lambda: {"message": "Bienvenido a Maverik"})
 
 app.include_router(chat.router)
+
+handler = Mangum(app)
