@@ -7,9 +7,10 @@ app = FastAPI(
     title="Maverik",
     description="Asistente financiero basado en la filosofía de Warren Buffett",
     version="1.0.0",
+    root_path="/api"
 )
 
-app.get("/")(lambda: {"message": "Bienvenido a Maverik"})
+app.get("/ping")(lambda: {"message": "Bienvenido a Maverik"})
 
 app.include_router(chat.router)
 
