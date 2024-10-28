@@ -39,7 +39,7 @@ Servicio que contiene y gestiona el LLM encargado de generar las respuestas para
    pip install -r requirements.txt
    ```
 
-4. **Configurar variables de entorno** (si aplica):
+4. **Configurar variables de entorno**:
 
    Asegúrate de crear un archivo `.env` o configurar las variables de entorno necesarias para la aplicación.
    Las necesarias son:
