@@ -63,29 +63,6 @@ Servicio que contiene y gestiona el LLM encargado de generar las respuestas para
 
    Esto iniciará el servidor en `http://127.0.0.1:8000` con recarga automática en caso de cambios en el código.
 
-## Uso
-
-- **Documentación de la API**:
-
-  - Puedes acceder a la documentación interactiva en Swagger UI en: `http://127.0.0.1:8000/docs`.
-  - También puedes usar la documentación en Redoc en: `http://127.0.0.1:8000/redoc`.
-
-- **Puntos de entrada (endpoints)**:
-
-  - Puedes listar aquí algunos de los endpoints principales de tu aplicación con ejemplos de solicitudes y respuestas.
-
-    ```http
-    GET /items/{item_id}
-    ```
-
-    ```json
-    {
-      "name": "Objeto de ejemplo",
-      "price": 100.0,
-      "description": "Este es un objeto de ejemplo"
-    }
-    ```
-
 ## Despliegue
 
 Se puede desplegar la aplicación en varios servicios de hosting como:
