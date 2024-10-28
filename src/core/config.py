@@ -9,7 +9,10 @@ class Settings(BaseSettings):
     )
 
     OPENAI_API_KEY: str
-    TAVILY_API_KEY: str
+    SERPAPI_API_KEY: str
+    GOOGLE_CSE_ID: str
+    GOOGLE_API_KEY: str
+    FMP_API_KEY: str
     MONGODB_ATLAS_CLUSTER_URI: str
     DB_NAME: str = "langchain_db"
     COLLECTION_NAME: str = "langchain_vectorstores"

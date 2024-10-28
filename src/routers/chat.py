@@ -14,7 +14,6 @@ async def chat_endpoint(request: ChatRequest):
     chat_history = request.chatHistory
 
     agent_executor = create_agent_executor(user_profile)
-    print(agent_executor)
     prompt_values = {
         "input": user_input,
         "chat_history": chat_history
