@@ -2,6 +2,13 @@ from fastapi import FastAPI
 from .routers import chat
 from mangum import Mangum
 from fastapi.middleware.cors import CORSMiddleware
+import logging
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s,%(msecs)d %(levelname)s: %(message)s",
+    datefmt="%H:%M:%S",
+)
 
 
 app = FastAPI(
